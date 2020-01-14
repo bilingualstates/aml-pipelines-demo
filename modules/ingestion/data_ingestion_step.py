@@ -40,7 +40,6 @@ def data_ingestion_step(datastore, compute_target):
         name="Data Ingestion",
         script_name='data_ingestion.py',
         arguments=['--output_dir', raw_data_dir, '--num_images', num_images],
-#        inputs=[data_reference],
         outputs=outputs,
         compute_target=compute_target,
         source_directory=os.path.dirname(os.path.abspath(__file__)),
